@@ -1,1 +1,1 @@
-apt-get update >> /var/log/update_script.log
+sudo apt-get -y update >> /var/log/update_script.log

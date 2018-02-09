@@ -1,1 +1,1 @@
-pkill /var/log/syslog
+pkill tail
