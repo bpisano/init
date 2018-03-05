@@ -1,1 +1,1 @@
-du -h --max-depth=1 /var/
+du -h -d=1 /var/
