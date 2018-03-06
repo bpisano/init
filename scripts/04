@@ -12,3 +12,5 @@ then
 	mail -s "Crontab modified" root@localhost.com < /etc/crontab
 	md5sum /etc/crontab > /etc/crontab_key
 fi
+
+# Ajouter sur crontab avec echo "0 0 * * * root sudo sh /root/04.sh" >> /etc/crontab
