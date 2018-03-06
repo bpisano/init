@@ -1,1 +1,5 @@
 sudo apt-get -y update >> /var/log/update_script.log
+sudo apt-get -y dist-upgrade >> /var/log/update_script.log
+
+# Ajouter dans /etc/crontab
+# 0 4 * * 1 root sh "repertoire du script"

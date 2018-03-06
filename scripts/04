@@ -1,0 +1,14 @@
+if [ ! -f /etc/crontab_key ]
+then
+	md5sum /etc/crontab > /etc/crontab_key
+fi
+
+md5sum /etc/contrab > tmp
+DIFF=$(diff /etc/crontab_key tmp)
+rm tmp
+
+if [ "$DIFF" != "" ]
+then
+	mail -s "Crontab modified" root@localhost.com < /etc/crontab
+	md5sum /etc/crontab > /etc/crontab_key
+fi
