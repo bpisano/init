@@ -9,7 +9,7 @@ rm tmp
 
 if [ "$DIFF" != "" ]
 then
-	mail -s "Crontab modified" root@localhost.com < /etc/crontab
+	mail -s "Crontab modified" root < /etc/crontab
 	md5sum /etc/crontab > /etc/crontab_key
 fi
 
